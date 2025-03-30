@@ -6,24 +6,28 @@ Supply chains today suffer from inefficiencies, fraud, and lack of transparency,
 
 🛠️ Problem Statement
 
-Traditional supply chains are prone to:
-
-Lack of Transparency: Shipments can be altered or delayed without real-time tracking.
-
-Fraudulent Activities: Intermediaries may tamper with the shipment details.
-
-Payment Disputes: Delays in payment release, leading to inefficiencies.
-
-Centralized Vulnerabilities: Single points of failure can disrupt operations.
+      Traditional supply chains are prone to:
+      
+      Lack of Transparency: Shipments can be altered or delayed without real-time tracking.
+      
+      Fraudulent Activities: Intermediaries may tamper with the shipment details.
+      
+      Payment Disputes: Delays in payment release, leading to inefficiencies.
+      
+      Centralized Vulnerabilities: Single points of failure can disrupt operations.
 
 🔥 How Our DApp Solves These Issues
 
-Our Decentralized Shipment Tracking DApp addresses these challenges by utilizing Ethereum blockchain and smart contracts to:
-✅ Ensure Immutable Tracking: Every shipment record is stored permanently on the blockchain.
-✅ Enable Trustless Transactions: Payments are locked in a smart contract and automatically released upon delivery confirmation.
-✅ Prevent Tampering & Fraud: Data cannot be altered, ensuring authenticity.
-✅ Remove Intermediaries: Eliminates unnecessary third-party involvement, reducing costs.
-✅ Provide Real-time Status Updates: Track shipments at every stage without relying on centralized databases.
+      Our Decentralized Shipment Tracking DApp addresses these challenges by utilizing Ethereum 
+      blockchain and smart contracts to:
+      ✅ Ensure Immutable Tracking: Every shipment record is stored permanently on the 
+          blockchain.
+      ✅ Enable Trustless Transactions: Payments are locked in a smart contract and 
+          automatically released upon delivery confirmation.
+      ✅ Prevent Tampering & Fraud: Data cannot be altered, ensuring authenticity.
+      ✅ Remove Intermediaries: Eliminates unnecessary third-party involvement, reducing costs.
+      ✅ Provide Real-time Status Updates: Track shipments at every stage without relying on 
+          centralized databases.
 
 📜 Flow of the DApp
 
@@ -56,7 +60,35 @@ Technical Stack
 ![Screenshot 2025-03-30 152330](https://github.com/user-attachments/assets/633bc10a-9f9e-4b7b-a837-849ce7d0bf5d)
 
 
-      
+
+
+![Screenshot 2025-03-25 005238](https://github.com/user-attachments/assets/44ce0010-ae17-4785-9789-6002ebebaa8d)
+
+
+
+![Screenshot 2025-03-25 010457](https://github.com/user-attachments/assets/906734f9-7483-474b-a379-c4f56d4b8091)
+
+
+![Screenshot 2025-03-25 010819](https://github.com/user-attachments/assets/f45d7fca-d90c-4e7c-876d-01e1643e7ebb)
+
+![Screenshot 2025-03-25 010907](https://github.com/user-attachments/assets/3e91fa63-08a3-4a2f-be0d-c715d5655510)
+
+
+![Screenshot 2025-03-25 010922](https://github.com/user-attachments/assets/13996b8d-8e18-486a-aa39-507d1ab8be73)
+
+
+![Screenshot 2025-03-25 010947](https://github.com/user-attachments/assets/cdfe16c0-67e0-44e1-8c5f-520ca5e57123)
+
+
+
+![Screenshot 2025-03-25 011027](https://github.com/user-attachments/assets/a891507d-3a3c-4a41-a809-9c0df3b06d6c)
+
+
+![Screenshot 2025-03-25 011052](https://github.com/user-attachments/assets/07999bb4-9254-45dc-a7cb-f3bdd0c638e2)
+![Screenshot 2025-03-25 011108](https://github.com/user-attachments/assets/76a13a61-b4fc-418f-9fd2-018e1b66caed)
+
+
+
 
       
 
