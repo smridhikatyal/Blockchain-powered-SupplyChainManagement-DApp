@@ -59,7 +59,56 @@ Technical Stack
       
       Database: Ethereum Blockchain (Immutable Storage)
 
+
+🚀 Key Features
+
+      🔹 Secure & Transparent Tracking: Every shipment is verifiable on-chain.
+      🔹 Automated Payment System: Payments are released only upon successful delivery.
+      🔹 Decentralized & Tamper-proof: Eliminates intermediaries and prevents fraud.
+      🔹 Real-time Status Updates: Provides accurate tracking at every stage.
+      🔹 Easy-to-Use Interface: Connect with MetaMask and manage shipments seamlessly.
+
+🔧 Smart Contract Functionality
+
+      Our Solidity smart contract, Tracking.sol, includes:
       
+      Creating a Shipment: Sender initializes a shipment with required details.
+      
+      Starting a Shipment: The assigned shipper marks the shipment as "In Transit."
+      
+      Completing a Shipment: The receiver confirms delivery, triggering automatic payment 
+      release.
+      
+      Event Emission: All major updates trigger blockchain events for easy monitoring.
+
+🏁 Getting Started
+
+    Clone the Repository:
+
+      git clone https://github.com/your-repo/blockchain-supply-chain.git
+      cd blockchain-supply-chain
+      
+      Install Dependencies:
+      
+      npm install
+      
+      Compile & Deploy Smart Contract (Hardhat):
+      
+      npx hardhat compile
+      npx hardhat run scripts/deploy.js --network rinkeby
+      
+      Start Frontend:
+
+      npm start
+      
+      Connect MetaMask & Test:
+      
+      Open the app in the browser.
+      
+      Connect your MetaMask wallet.
+      
+      Create, track, and complete shipments using the DApp.
+
 
 🏗️ Flow Overview
 
