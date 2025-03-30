@@ -1,0 +1,33 @@
+{
+  "name": "tracking",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "compile": "hardhat compile",
+    "deploy-local": "hardhat run scripts/deploy.js --network localhost",
+    "deploy-holesky": "hardhat run scripts/deploy.js --network holesky",
+    "deploy-sepolia": "hardhat run scripts/deploy.js --network sepolia",
+    "clear": "rm -rf node_modules package-lock.json cache artifacts .next",
+    "node": "hardhat node"
+  },
+  "dependencies": {
+    "@next/font": "13.2.4",
+    "ethers": "^5.7.2",
+    "hardhat": "^2.13.0",
+    "dotenv": "^16.4.7",
+    "next": "13.2.4",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "web3modal": "^1.9.12"
+  },
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^2.0.2",
+    "autoprefixer": "^10.4.14",
+    "postcss": "^8.4.21",
+    "tailwindcss": "^3.3.1"
+  }
+}
