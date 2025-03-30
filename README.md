@@ -27,62 +27,36 @@ Our Decentralized Shipment Tracking DApp addresses these challenges by utilizing
 
 📜 Flow of the DApp
 
-User Connects Wallet: The sender connects their MetaMask wallet to the DApp.
-
-Create Shipment: Sender enters receiver details, distance, pickup time, and price.
-
-Smart Contract Stores Data: Shipment details are stored on the blockchain.
-
-Shipment Updates: The status updates as the shipment progresses.
-
-Completion & Payment Release: Once delivery is confirmed, payment is automatically released to the receiver.
+      User Connects Wallet: The sender connects their MetaMask wallet to the DApp.
+      
+      Create Shipment: Sender enters receiver details, distance, pickup time, and price.
+      
+      Smart Contract Stores Data: Shipment details are stored on the blockchain.
+      
+      Shipment Updates: The status updates as the shipment progresses.
+      
+      Completion & Payment Release: Once delivery is confirmed, payment is automatically released to the receiver.
 
 🏗️ Architecture Overview
 
 Technical Stack
 
-Frontend: React.js, Web3.js, Ether.js
+      Frontend: React.js, Web3.js, Ether.js
+      
+      Backend: Smart Contracts (Solidity)
+      
+      Blockchain: Ethereum (Hardhat)
+      
+      Development Tools: Hardhat,Web3Modal, MetaMask
+      
+      Database: Ethereum Blockchain (Immutable Storage)
 
-Backend: Smart Contracts (Solidity)
+      
 
-Blockchain: Ethereum (Testnet - Hardhat)
-
-Development Tools: Hardhat, Remix IDE, Web3Modal, MetaMask
-
-Database: Ethereum Blockchain (Immutable Storage)
-
-Sequence Diagram 
-
-User        Web3Provider   SmartContract    Blockchain
-  |              |              |               |
-  | Connect Wallet |              |               |
-  |------------->|              |               |
-  |              | Connect       |               |
-  |              |------------->|               |
-  |              |              | Store Account |
-  |              |              |-------------->|
-  |              |              |               |
-  | Create Shipment |              |              |
-  |--------------->|              |               |
-  |              | Call Smart Contract |          |
-  |              |--------------->|               |
-  |              |              | Store Shipment |
-  |              |              |-------------->|
-  |              |              |               |
-  | Start Shipment |              |               |
-  |--------------->|              |               |
-  |              | Call Smart Contract |               |
-  |              |--------------->|               |
-  |              |              | Update Status  |
-  |              |              |-------------->|
-  |              |              |               |
-  | Complete Shipment |              |            |
-  |--------------->|              |               |
-  |              | Call Smart Contract |           |
-  |              |--------------->|               |
-  |              |              | Update Status  |
-  |              |              | Release Payment to Receiver ✅ |
-  |              |              |-------------->|
+![Screenshot 2025-03-30 152330](https://github.com/user-attachments/assets/633bc10a-9f9e-4b7b-a837-849ce7d0bf5d)
 
 
+      
+
+      
 
