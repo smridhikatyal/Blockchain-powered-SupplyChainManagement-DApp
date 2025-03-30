@@ -62,9 +62,9 @@ User        Web3Provider   SmartContract    Blockchain
   |              |              | Store Account |
   |              |              |-------------->|
   |              |              |               |
-  | Create Shipment |              |               |
+  | Create Shipment |              |              |
   |--------------->|              |               |
-  |              | Call Smart Contract |               |
+  |              | Call Smart Contract |          |
   |              |--------------->|               |
   |              |              | Store Shipment |
   |              |              |-------------->|
@@ -76,9 +76,9 @@ User        Web3Provider   SmartContract    Blockchain
   |              |              | Update Status  |
   |              |              |-------------->|
   |              |              |               |
-  | Complete Shipment |              |               |
+  | Complete Shipment |              |            |
   |--------------->|              |               |
-  |              | Call Smart Contract |               |
+  |              | Call Smart Contract |           |
   |              |--------------->|               |
   |              |              | Update Status  |
   |              |              | Release Payment to Receiver ✅ |
