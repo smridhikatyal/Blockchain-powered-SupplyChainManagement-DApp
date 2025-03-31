@@ -147,7 +147,7 @@ Technical Stack
 
 
 
-📜Start the Shipping Process(the shipper will ship the product)
+📜Start the Shipping Process(Only Asssiged shipper can start the shipping process)
 
 
 
@@ -164,7 +164,7 @@ Technical Stack
 
 
 
-📜Complete the Shipping Process(Delivery Guy will end the shipping process)
+📜Complete the Shipping Process(Only reciever / Delivery Guy can end the shipping process and mark the status Deliverd-> Then only the payment will be released to Shipper)
 
 
 
