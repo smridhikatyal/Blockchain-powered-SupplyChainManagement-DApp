@@ -33,24 +33,52 @@ contract Tracking {
 
     TypeShipment[] public typeShipments;
 
+    address[] public shipperList; // List of registered shippers
+    uint256 public currentShipperIndex = 0; // Round-robin index
+    
+    
+    mapping(address => bool) public isShipperRegistered; // Prevent duplicates
+
     event ShipmentCreated(address indexed sender, address indexed receiver, uint256 pickupTime, uint256 distance, uint256 price);
     event ShipmentInTransit(address indexed sender, address indexed receiver, address indexed shipper, uint256 pickupTime);
     event ShipmentDelivered(address indexed sender, address indexed receiver, address indexed shipper, uint256 deliveryTime);
     event ShipmentPaid(address indexed sender, address indexed receiver, address indexed shipper, uint256 amount);
+    event ShipperRegistered(address indexed shipper);
 
     constructor() {
         shipmentCount = 0;
     }
 
-    // ✅ **Only sender can create shipment & must send ETH**
-    function createShipment(address _receiver, address _shipper, uint256 _pickupTime, uint256 _distance, uint256 _price) public payable {
+    // ✅ **Register a new shipper (Prevents duplicates)**
+    function registerShipper() public {
+        require(!isShipperRegistered[msg.sender], "Shipper already registered.");
+        
+        shipperList.push(msg.sender);
+        isShipperRegistered[msg.sender] = true;
+        
+        emit ShipperRegistered(msg.sender);
+    }
+
+    // ✅ **Round-Robin Shipper Selection**
+    function getNextShipper() internal returns (address) {
+        require(shipperList.length > 0, "No registered shippers available.");
+        
+        address assignedShipper = shipperList[currentShipperIndex];
+        currentShipperIndex = (currentShipperIndex + 1) % shipperList.length; // Move to next shipper
+        
+        return assignedShipper;
+    }
+
+
+    // ✅ **Only sender can create shipment & must send ETH assigns shipper using Round-Robin**
+    function createShipment(address _receiver,  uint256 _pickupTime, uint256 _distance, uint256 _price) public payable {
         require(msg.value == _price, "Payment amount must match the price.");
-        require(_shipper != address(0), "Invalid shipper address.");
+        address assignedShipper = getNextShipper(); // Get next available shipper
 
         Shipment memory shipment = Shipment(
             msg.sender,
             _receiver,
-            _shipper, // Assign shipper during creation
+            assignedShipper, // Assign shipper during creation
             _pickupTime,
             0,
             _distance,
@@ -66,7 +94,7 @@ contract Tracking {
             TypeShipment(
                 msg.sender,
                 _receiver,
-                _shipper,
+                assignedShipper,
                 _pickupTime,
                 0,
                 _distance,
@@ -80,18 +108,18 @@ contract Tracking {
     }
 
     // ✅ **Only the assigned shipper can start the shipment**
-    function startShipment(address _sender, address _receiver, uint256 _index) public {
+    function startShipment(address _sender, uint256 _index) public {
         Shipment storage shipment = shipments[_sender][_index];
         TypeShipment storage typeShipment = typeShipments[_index];
 
-        require(shipment.receiver == _receiver, "Invalid receiver.");
+        
         require(shipment.status == ShipmentStatus.PENDING, "Shipment already in transit or delivered.");
         require(msg.sender == shipment.shipper, "Only assigned shipper can start the shipment.");
 
         shipment.status = ShipmentStatus.IN_TRANSIT;
         typeShipment.status = ShipmentStatus.IN_TRANSIT;
 
-        emit ShipmentInTransit(_sender, _receiver, msg.sender, shipment.pickupTime);
+        emit ShipmentInTransit(_sender, shipment.receiver, msg.sender, shipment.pickupTime);
     }
 
     // ✅ **Only receiver can complete shipment and release payment**
@@ -134,9 +162,9 @@ contract Tracking {
      function getAllTransactions()
         public
         view
-        returns (TyepShipment[] memory)
+        returns (TypeShipment[] memory)
     {
-        return tyepShipments;
+        return typeShipments;
     }
 
    
