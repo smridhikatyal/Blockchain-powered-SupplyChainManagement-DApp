@@ -164,7 +164,7 @@ Technical Stack
 
 
 
-📜Complete the Shipping Process(Only reciever / Delivery Guy can end the shipping process and mark the status Deliverd-> Then only the payment will be released to Shipper)
+📜Complete the Shipping Process(Only reciever / Delivery Guy can end the shipping process and mark the status Delivered-> Then only the payment will be released to Shipper)
 
 
 
