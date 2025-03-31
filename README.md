@@ -32,6 +32,7 @@
       ✅ Remove Intermediaries: Eliminates unnecessary third-party involvement, reducing costs.
       ✅ Provide Real-time Status Updates: Track shipments at every stage without relying on 
           centralized databases.
+      ✅ A Shipment tracking system with round-robin shipper assignment and secure payment processing
 
 📜 Flow of the DApp
 
